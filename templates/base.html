@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Banglore_House_Prediction</title>
+
+            <!-- bootstrap -->
+
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <!-- Medium style Editor -->
+            <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+            <!-- Custom CSS -->
+            <link rel="stylesheet" href="{% static 'static/css/pred.css' %}">
+
+            <!-- Fonts -->
+            <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">  </head>
+  <body class="loader">
+    <nav class='navbar navbar-default techfont custom-navbar'>
+      <div class="container">
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand bigbrand">Banglore</a>
+        <li><a class="nav-item nav-link active" href="{% url 'home' %}">Home</a></li>
+        <li><a class="nav-item nav-link" href="{% url 'form' %}">Pricing</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

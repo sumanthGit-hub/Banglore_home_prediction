@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <h2><b>Select Your Preferences</b></h2>
+  <br>
+  <form class="" enctype="multipart/form-data" method='post'>
+    {{ form|crispy }}
+    {% csrf_token %}
+    <button type="Submit" class="class="btn btn-primary">Submit</button>
+    <h4>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <div {% if message.tags %} class="{{ messages.tags }}" {% endif %}>
+          <b>{{ message }}</b></div>
+          {% endfor %}
+      </ul>
+      {% endif %}
+    </h4>
+  </form>
+{% endblock %}
