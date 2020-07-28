@@ -23,9 +23,9 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = '_^%yiz6(*hhyg=2^luql0ek2@!wf7&_24ss4gjk4e_!(58b-$o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://git.heroku.com/banglore-home-prediction.git']
 
 
 # Application definition
