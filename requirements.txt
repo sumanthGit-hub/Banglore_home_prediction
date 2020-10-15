@@ -1,2 +1,2 @@
 python >= 3.6
-django == 3.0
+django>=3.0.7
